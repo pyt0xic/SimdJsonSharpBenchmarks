@@ -2,7 +2,15 @@ namespace SimdJsonBench;
 
 public sealed class Rec
 {
-    public Rec(string jobno, string invoiced, string invoiceno, string email, string oemail, string vin, string branch)
+    public Rec(
+        string jobno,
+        string invoiced,
+        string invoiceno,
+        string email,
+        string oemail,
+        string vin,
+        string branch
+    )
     {
         Jobno = jobno;
         Invoiced = invoiced;
