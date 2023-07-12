@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <Configuration>Release</Configuration>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- <PackageReference Include="CppSharp" Version="1.0.54.626" /> -->
+    <PackageReference Include="BrotliSharpLib" Version="0.3.3" />
+    <PackageReference Include="CppSharp.Runtime" Version="1.0.54.626" />
+    <PackageReference Include="SimdJsonSharp.Managed" Version="1.5.0" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.6" />
+    <PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.13.6" Condition="'$(OS)' == 'Windows_NT'" />
+    <Content Include="./data.json.br">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
